@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui",sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  content: "HUMANODE";
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h1 {
+    color: #4CAF50
+}
+.button {
+    margin: 20px;
+    padding: 15px 25px;
+    font: 400 24px/2 exo, ubuntu, "segoe ui",sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Reduced border radius */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual button styles */
+
+.coffee-button {
+    background: linear-gradient(135deg, #4a1a11, #772621);
+    /* Darker brown for coffee button */
+}
+
+.tree-button {
+    background: linear-gradient(135deg, #1d5910, #469b26);
+    /* Darker green for tree button */
+}
+
+.network-button {
+    background: linear-gradient(135deg, #d5a63d, #d17e3d);
+    /* Darker orange for network button */
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+/* Hover effects for buttons */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Pressing effects for buttons */
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#info-section {
+    margin-top: 50px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 15px;
+    max-width: 600px;  
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 1em; /* smaller font size for compact text */
+}
+
+#info-section h2 {
+    color: #333; 
+    font-size: 1.5em; /* smaller header size */
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid #ddd; /* subtle line under header */
+    padding-bottom: 0.3em;
+}
+
+#info-section p {
+    color: #666;
+    text-indent: 20px; /* first line indent for each paragraph */
+}
+
+#info-section ul {
+    padding-left: 40px; /* left padding for list items */
+}
+
+#info-section ul li {
+    margin-bottom: 10px; /* bottom margin for list items */
+}
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+backdrop-filter: blur(10px); /* This will give the blur effect you want */
+}
+
+/* Updated Modal Content */
+.modal-content {
+position: relative;
+background-color: rgba(255,255,255,0.8);
+font: 800 24px/2 exo, ubuntu, "segoe ui",sans-serif;
+color:#000;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 20%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s;
+}
+
+.modal-header {
+color: darkgreen; /* Change the color of header */
+font-size: 1.5em; /* Make header text bigger */
+}
+
+.modal-body {
+color: darkgreen; /* Change the color of body */
+}
+
+.modal-footer {
+color: darkgreen; /* Change the color of footer */
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.close-button {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+input[type="number"] {
+width: 100%; /* Make the input field take up the full width of its parent */
+font:600 exo;
+padding: 12px 20px; /* Add some padding */
+margin: 8px 0; /* Add some margin */
+display: inline-block; /* Make it inline-block */
+border: 1px solid #ccc; /* Add a border */
+border-radius: 4px; /* Add rounded corners */
+box-sizing: border-box; /* Make sure padding and width stays inside of the total width */
+}
