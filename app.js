@@ -95,7 +95,7 @@ $('#addNetwork').click(async function () {
     try {
         const provider = window.ethereum;
         if (provider) {
-            const chainId = '0x' + parseInt(5234).toString(16); // Converts 5234 to hexadecimal
+            const chainId = '0x' + parseInt(14853).toString(16); // Chain-id has been changed.
             await provider.request({
                 method: 'wallet_addEthereumChain',
                 params: [
