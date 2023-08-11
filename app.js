@@ -54,7 +54,7 @@ window.addEventListener('load', async () => {
             "type": "function"
         }
     ];
-    const contractAddress = "0x2b8B8EFd9a9Ec66EC6854145Fc026b336be894b7";
+    const contractAddress = "0xB0fCFf0FE6A64424e2a243AF984f96B9728C8860";
     const contract = new web3.eth.Contract(contractABI, contractAddress);
 
     document.getElementById('buyCoffee').addEventListener('click', async () => {
